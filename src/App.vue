@@ -1,27 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <container />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import container from "./components/container.vue"
 export default {
+  components: { container },
   name: "App",
-  components: {
-    HelloWorld,
-  },
-};
+}
 </script>
 
 <style lang="stylus">
 #app
-  font-family Avenir, Helvetica, Arial, sans-serif
+  font-family Fira Sans
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+  color #000
+// .ghost-ticket
+//   opacity 0.4
+  // border-bottom: 4px solid blue;
+.chosen-ticket
+  border: 1px solid #DFE4EF
+  box-shadow: 0px 3px 16px rgba(0, 102, 255, 0.7)
+.dragging-ticket
+  border: 1px solid #DFE4EF
+  box-shadow: 0px 3px 16px rgba(0, 102, 255, 0.7)
 </style>
